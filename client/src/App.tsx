@@ -1,6 +1,11 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Navbar } from './components/Navbar'
+import { AuthPage } from './pages/auth'
+import { CheckoutPage } from './pages/checkout'
+import { PurchasedPage } from './pages/purchased-items'
+import { ShopPage } from './pages/shop'
+
 
 function App() {
 
@@ -13,10 +18,10 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route path='/' />
-            <Route path='/auth' />
-            <Route path='/checkout' />
-            <Route path='/purchased-items' />
+            <Route path='/' element={<ShopPage/>} />
+            <Route path='/auth' element={<AuthPage/>}/>
+            <Route path='/checkout' element={<CheckoutPage/>}/>
+            <Route path='/purchased-items' element={<PurchasedPage/>}/>
           </Routes>
         </Router>
       </div>
