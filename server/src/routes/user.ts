@@ -59,9 +59,10 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction) => 
             }
             next();
         })
+    } else{
+        return res.send(401);
     }
 
-        return res.send(401);
 }
 
 

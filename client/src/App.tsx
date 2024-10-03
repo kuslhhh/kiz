@@ -8,7 +8,7 @@ import { PurchasedItemsPage } from './pages/purchased-items';
 
 const App = () => {
   return (
-    <div className='p-10 bg-black font-m h-screen text-white text-center'>
+    <div className='bg-white font-m h-full text-white text-center'>
       <Router>
         <Navbar/>
         <Routes>
